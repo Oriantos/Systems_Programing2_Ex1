@@ -104,7 +104,7 @@ namespace graph {
         removeDirectedEdge(v, u);
     }
 
-    void Graph::printGraph() {
+    void Graph::print() {
         for (int i = 1; i <= numVertices; ++i) {
             printf("Vertex %d:", i);
             Edge *curr = adjList[i];

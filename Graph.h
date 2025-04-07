@@ -22,8 +22,6 @@ namespace graph {
 
         Edge *createEdge(int vertex, int weight, Edge *next = nullptr);
 
-        bool edgeExists(int u, int v);
-
         bool removeDirectedEdge(int u, int v);
 
         void sort(int src);
@@ -35,11 +33,13 @@ namespace graph {
 
         ~Graph();
 
-        int Graph::getNumVertices() const {
+        bool edgeExists(int u, int v);
+
+        int getNumVertices() const {
             return numVertices;
         }
 
-        Edge **Graph::getAdjList() const {
+        Edge **getAdjList() const {
             return adjList;
         }
 
@@ -47,7 +47,7 @@ namespace graph {
 
         void removeEdge(int u, int v);
 
-        void printGraph();
+        void print();
     };
 } // namespace graph
 
